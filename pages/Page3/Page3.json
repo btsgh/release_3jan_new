@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Page2",
-    "slug": "page2",
+    "name": "Page3",
+    "slug": "page3",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 760,
+          "bottomRow": 430,
           "containerStyle": "none",
           "snapRows": 56,
           "parentRowSpace": 1,
@@ -28,7 +28,7 @@
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Page2",
+        "id": "Page3",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -38,5 +38,5 @@
     "policies": []
   },
   "deleted": false,
-  "gitSyncId": "659505f23b269549d16cd12d_65965cfd17cc4f6b46027f31"
+  "gitSyncId": "659505f23b269549d16cd12d_65969a7ebaa5393f1da7f7f8"
 }
