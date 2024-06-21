@@ -1,50 +1,63 @@
 {
-    "mobileBottomRow": 76,
-    "widgetName": "Custom3",
-    "srcDoc": {
-        "css": "/* Add some basic styling for the button widget */\n.button-widget {\n    text-align: center;\n    margin: 20px;\n}\n\n#myButton {\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    text-align: center;\n    text-decoration: none;\n    background-color: #3498db; /* Change the color to your preference */\n    color: #fff;\n    border: 1px solid #2980b9; /* Change the color to your preference */\n    border-radius: 5px;\n    cursor: pointer;\n}\n\n#myButton:hover {\n    background-color: #2980b9; /* Change the color to your preference */\n}\n",
-        "js": "// JavaScript code for the button widget\ndocument.getElementById(\"myButton\").addEventListener(\"click\", function () {\n  alert(\"Button Clicked!\");\n  // Add additional JavaScript logic here if needed\n});",
-        "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button Widget<\/title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n<\/head>\n<body>\n\n    <div class=\"button-widget\" id=\"myButtonWidget\">\n        <button id=\"myButton\">Click me<\/button>\n    <\/div>\n\n    <script src=\"script.js\"><\/script>\n\n<\/body>\n<\/html>\n"
-    },
-    "isCanvas": false,
-    "dynamicPropertyPathList": [],
-    "displayName": "Custom",
-    "iconSVG": "/static/media/icon.867bcc8399fa3f897d425d72690b86e4.svg",
-    "searchTags": ["external"],
-    "topRow": 46,
-    "bottomRow": 76,
-    "parentRowSpace": 10,
-    "type": "CUSTOM_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 30,
-    "parentColumnSpace": 11.796875,
-    "dynamicTriggerPathList": [{"key": "onRefreshClick"}],
-    "dynamicBindingPathList": [{"key": "theme"}],
-    "leftColumn": 0,
-    "defaultModel": "{\n  \"tips\": [\n    \"Pass data to this widget in the default model field\",\n    \"Access data in the javascript file using the appsmith.model variable\",\n    \"Create events in the widget and trigger them in the javascript file using appsmith.triggerEvent('eventName')\",\n    \"Access data in CSS as var(--appsmith-model-{property-name})\"\n  ]\n}",
-    "theme": "{{appsmith.theme}}",
-    "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
-    "events": [
-        "onResetClick",
-        "onRefreshClick"
-    ],
-    "key": "osdh52wbpw",
-    "onRefreshClick": "{{showAlert('Successfully reset!!', '').catch(() => {\n  showAlert('failed', '');\n});}}",
-    "isDeprecated": false,
-    "rightColumn": 16,
-    "isSearchWildcard": true,
-    "widgetId": "cc6r0n4iin",
-    "isVisible": false,
-    "version": 1,
-    "uncompiledSrcDoc": {
-        "css": "/* Add some basic styling for the button widget */\n.button-widget {\n    text-align: center;\n    margin: 20px;\n}\n\n#myButton {\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    text-align: center;\n    text-decoration: none;\n    background-color: #3498db; /* Change the color to your preference */\n    color: #fff;\n    border: 1px solid #2980b9; /* Change the color to your preference */\n    border-radius: 5px;\n    cursor: pointer;\n}\n\n#myButton:hover {\n    background-color: #2980b9; /* Change the color to your preference */\n}\n",
-        "js": "// JavaScript code for the button widget\ndocument.getElementById(\"myButton\").addEventListener(\"click\", function() {\n    alert(\"Button Clicked!\");\n    // Add additional JavaScript logic here if needed\n});\n",
-        "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button Widget<\/title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n<\/head>\n<body>\n\n    <div class=\"button-widget\" id=\"myButtonWidget\">\n        <button id=\"myButton\">Click me<\/button>\n    <\/div>\n\n    <script src=\"script.js\"><\/script>\n\n<\/body>\n<\/html>\n"
-    },
-    "parentId": "0",
-    "tags": ["Display"],
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 46,
-    "mobileLeftColumn": 10
+  "bottomRow": 76,
+  "defaultModel": "{\n  \"tips\": [\n    \"Pass data to this widget in the default model field\",\n    \"Access data in the javascript file using the appsmith.model variable\",\n    \"Create events in the widget and trigger them in the javascript file using appsmith.triggerEvent('eventName')\",\n    \"Access data in CSS as var(--appsmith-model-{property-name})\"\n  ]\n}",
+  "displayName": "Custom",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRefreshClick"
+    }
+  ],
+  "events": [
+    "onResetClick",
+    "onRefreshClick"
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.867bcc8399fa3f897d425d72690b86e4.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": false,
+  "key": "osdh52wbpw",
+  "leftColumn": 0,
+  "mobileBottomRow": 76,
+  "mobileLeftColumn": 10,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 46,
+  "onRefreshClick": "{{showAlert('Successfully reset!!', '').catch(() => {\n  showAlert('failed', '');\n});}}",
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "parentColumnSpace": 11.796875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 16,
+  "searchTags": [
+    "external"
+  ],
+  "srcDoc": {
+    "css": "/* Add some basic styling for the button widget */\n.button-widget {\n    text-align: center;\n    margin: 20px;\n}\n\n#myButton {\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    text-align: center;\n    text-decoration: none;\n    background-color: #3498db; /* Change the color to your preference */\n    color: #fff;\n    border: 1px solid #2980b9; /* Change the color to your preference */\n    border-radius: 5px;\n    cursor: pointer;\n}\n\n#myButton:hover {\n    background-color: #2980b9; /* Change the color to your preference */\n}\n",
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button Widget</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <div class=\"button-widget\" id=\"myButtonWidget\">\n        <button id=\"myButton\">Click me</button>\n    </div>\n\n    <script src=\"script.js\"></script>\n\n</body>\n</html>\n",
+    "js": "// JavaScript code for the button widget\ndocument.getElementById(\"myButton\").addEventListener(\"click\", function () {\n  alert(\"Button Clicked!\");\n  // Add additional JavaScript logic here if needed\n});"
+  },
+  "tags": [
+    "Display"
+  ],
+  "theme": "{{appsmith.theme}}",
+  "topRow": 46,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "/* Add some basic styling for the button widget */\n.button-widget {\n    text-align: center;\n    margin: 20px;\n}\n\n#myButton {\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    text-align: center;\n    text-decoration: none;\n    background-color: #3498db; /* Change the color to your preference */\n    color: #fff;\n    border: 1px solid #2980b9; /* Change the color to your preference */\n    border-radius: 5px;\n    cursor: pointer;\n}\n\n#myButton:hover {\n    background-color: #2980b9; /* Change the color to your preference */\n}\n",
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button Widget</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <div class=\"button-widget\" id=\"myButtonWidget\">\n        <button id=\"myButton\">Click me</button>\n    </div>\n\n    <script src=\"script.js\"></script>\n\n</body>\n</html>\n",
+    "js": "// JavaScript code for the button widget\ndocument.getElementById(\"myButton\").addEventListener(\"click\", function() {\n    alert(\"Button Clicked!\");\n    // Add additional JavaScript logic here if needed\n});\n"
+  },
+  "version": 1,
+  "widgetId": "cc6r0n4iin",
+  "widgetName": "Custom3"
 }
