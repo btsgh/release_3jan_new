@@ -1,46 +1,57 @@
 {
-    "mobileBottomRow": 48,
-    "widgetName": "Custom2",
-    "srcDoc": {
-        "css": "",
-        "js": "",
-        "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Review Widget with JavaScript<\/title>\n    <style>\n        /* Add the CSS styles for the review widget (same as before) */\n        .review-widget {\n            font-family: 'Arial', sans-serif;\n            border: 1px solid #ccc;\n            padding: 15px;\n            width: 300px;\n            text-align: center;\n            margin: 20px;\n        }\n\n        .rating {\n            color: #f39c12; /* Change the color to your preference */\n            font-size: 24px;\n            margin-bottom: 10px;\n        }\n\n        .user-review {\n            font-size: 14px;\n            margin-bottom: 10px;\n        }\n\n        .author {\n            font-style: italic;\n            color: #777;\n        }\n    <\/style>\n<\/head>\n<body>\n\n    <div class=\"review-widget\" id=\"reviewWidget\">\n        <div class=\"rating\" id=\"averageRating\">4.5 / 5<\/div>\n        <div class=\"user-review\" id=\"userReview\">\n            \"This is a fantastic product! I'm very satisfied with my purchase.\"\n        <\/div>\n        <div class=\"author\" id=\"reviewAuthor\">- John Doe<\/div>\n\n        <hr>\n\n        <h3>Submit Your Review<\/h3>\n        <label for=\"userRating\">Rating: <\/label>\n        <input type=\"number\" id=\"userRating\" min=\"1\" max=\"5\" step=\"0.1\">\n        <br>\n        <label for=\"userReviewText\">Review: <\/label>\n        <textarea id=\"userReviewText\"><\/textarea>\n        <br>\n        <button onclick=\"submitReview()\">Submit Review<\/button>\n    <\/div>\n\n    <script>\n        let totalRating = 4.5; // Initial average rating\n        let numberOfReviews = 1; // Initial number of reviews\n\n        function submitReview() {\n            const userRating = parseFloat(document.getElementById(\"userRating\").value);\n            const userReviewText = document.getElementById(\"userReviewText\").value;\n\n            // Check if the user entered a valid rating\n            if (isNaN(userRating) || userRating < 1 || userRating > 5) {\n                alert(\"Please enter a valid rating between 1 and 5.\");\n                return;\n            }\n\n            // Update the total rating and number of reviews\n            totalRating = (totalRating * numberOfReviews + userRating) / (numberOfReviews + 1);\n            numberOfReviews++;\n\n            // Update the displayed average rating\n            document.getElementById(\"averageRating\").textContent = totalRating.toFixed(1) + \" / 5\";\n\n            // Display the user's review\n            document.getElementById(\"userReview\").textContent = `\"${userReviewText}\"`;\n\n            // Display the user's name (you can customize this part)\n            document.getElementById(\"reviewAuthor\").textContent = \"- Anonymous\";\n\n            // Clear the input fields\n            document.getElementById(\"userRating\").value = \"\";\n            document.getElementById(\"userReviewText\").value = \"\";\n        }\n    <\/script>\n\n<\/body>\n<\/html>\n"
-    },
-    "isCanvas": false,
-    "dynamicPropertyPathList": [],
-    "displayName": "Custom",
-    "iconSVG": "/static/media/icon.867bcc8399fa3f897d425d72690b86e4.svg",
-    "searchTags": ["external"],
-    "topRow": 14,
-    "bottomRow": 45,
-    "parentRowSpace": 10,
-    "type": "CUSTOM_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 52,
-    "parentColumnSpace": 11.796875,
-    "dynamicTriggerPathList": [],
-    "dynamicBindingPathList": [{"key": "theme"}],
-    "leftColumn": 9,
-    "defaultModel": "{\n  \"tips\": [\n    \"Pass data to this widget in the default model field\",\n    \"Access data in the javascript file using the appsmith.model variable\",\n    \"Create events in the widget and trigger them in the javascript file using appsmith.triggerEvent('eventName')\",\n    \"Access data in CSS as var(--appsmith-model-{property-name})\"\n  ]\n}",
-    "theme": "{{appsmith.theme}}",
-    "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
-    "events": ["onResetClick"],
-    "key": "yyatu1z0py",
-    "isDeprecated": false,
-    "rightColumn": 51,
-    "isSearchWildcard": true,
-    "widgetId": "f6jladulzi",
-    "isVisible": true,
-    "version": 1,
-    "uncompiledSrcDoc": {
-        "css": "",
-        "js": "",
-        "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Review Widget with JavaScript<\/title>\n    <style>\n        /* Add the CSS styles for the review widget (same as before) */\n        .review-widget {\n            font-family: 'Arial', sans-serif;\n            border: 1px solid #ccc;\n            padding: 15px;\n            width: 300px;\n            text-align: center;\n            margin: 20px;\n        }\n\n        .rating {\n            color: #f39c12; /* Change the color to your preference */\n            font-size: 24px;\n            margin-bottom: 10px;\n        }\n\n        .user-review {\n            font-size: 14px;\n            margin-bottom: 10px;\n        }\n\n        .author {\n            font-style: italic;\n            color: #777;\n        }\n    <\/style>\n<\/head>\n<body>\n\n    <div class=\"review-widget\" id=\"reviewWidget\">\n        <div class=\"rating\" id=\"averageRating\">4.5 / 5<\/div>\n        <div class=\"user-review\" id=\"userReview\">\n            \"This is a fantastic product! I'm very satisfied with my purchase.\"\n        <\/div>\n        <div class=\"author\" id=\"reviewAuthor\">- John Doe<\/div>\n\n        <hr>\n\n        <h3>Submit Your Review<\/h3>\n        <label for=\"userRating\">Rating: <\/label>\n        <input type=\"number\" id=\"userRating\" min=\"1\" max=\"5\" step=\"0.1\">\n        <br>\n        <label for=\"userReviewText\">Review: <\/label>\n        <textarea id=\"userReviewText\"><\/textarea>\n        <br>\n        <button onclick=\"submitReview()\">Submit Review<\/button>\n    <\/div>\n\n    <script>\n        let totalRating = 4.5; // Initial average rating\n        let numberOfReviews = 1; // Initial number of reviews\n\n        function submitReview() {\n            const userRating = parseFloat(document.getElementById(\"userRating\").value);\n            const userReviewText = document.getElementById(\"userReviewText\").value;\n\n            // Check if the user entered a valid rating\n            if (isNaN(userRating) || userRating < 1 || userRating > 5) {\n                alert(\"Please enter a valid rating between 1 and 5.\");\n                return;\n            }\n\n            // Update the total rating and number of reviews\n            totalRating = (totalRating * numberOfReviews + userRating) / (numberOfReviews + 1);\n            numberOfReviews++;\n\n            // Update the displayed average rating\n            document.getElementById(\"averageRating\").textContent = totalRating.toFixed(1) + \" / 5\";\n\n            // Display the user's review\n            document.getElementById(\"userReview\").textContent = `\"${userReviewText}\"`;\n\n            // Display the user's name (you can customize this part)\n            document.getElementById(\"reviewAuthor\").textContent = \"- Anonymous\";\n\n            // Clear the input fields\n            document.getElementById(\"userRating\").value = \"\";\n            document.getElementById(\"userReviewText\").value = \"\";\n        }\n    <\/script>\n\n<\/body>\n<\/html>\n"
-    },
-    "parentId": "0",
-    "tags": ["Display"],
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 18,
-    "mobileLeftColumn": 32
+  "bottomRow": 45,
+  "defaultModel": "{\n  \"tips\": [\n    \"Pass data to this widget in the default model field\",\n    \"Access data in the javascript file using the appsmith.model variable\",\n    \"Create events in the widget and trigger them in the javascript file using appsmith.triggerEvent('eventName')\",\n    \"Access data in CSS as var(--appsmith-model-{property-name})\"\n  ]\n}",
+  "displayName": "Custom",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "events": [
+    "onResetClick"
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.867bcc8399fa3f897d425d72690b86e4.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "yyatu1z0py",
+  "leftColumn": 9,
+  "mobileBottomRow": 48,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 52,
+  "mobileTopRow": 18,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "parentColumnSpace": 11.796875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 51,
+  "searchTags": [
+    "external"
+  ],
+  "srcDoc": {
+    "css": "",
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Review Widget with JavaScript</title>\n    <style>\n        /* Add the CSS styles for the review widget (same as before) */\n        .review-widget {\n            font-family: 'Arial', sans-serif;\n            border: 1px solid #ccc;\n            padding: 15px;\n            width: 300px;\n            text-align: center;\n            margin: 20px;\n        }\n\n        .rating {\n            color: #f39c12; /* Change the color to your preference */\n            font-size: 24px;\n            margin-bottom: 10px;\n        }\n\n        .user-review {\n            font-size: 14px;\n            margin-bottom: 10px;\n        }\n\n        .author {\n            font-style: italic;\n            color: #777;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"review-widget\" id=\"reviewWidget\">\n        <div class=\"rating\" id=\"averageRating\">4.5 / 5</div>\n        <div class=\"user-review\" id=\"userReview\">\n            \"This is a fantastic product! I'm very satisfied with my purchase.\"\n        </div>\n        <div class=\"author\" id=\"reviewAuthor\">- John Doe</div>\n\n        <hr>\n\n        <h3>Submit Your Review</h3>\n        <label for=\"userRating\">Rating: </label>\n        <input type=\"number\" id=\"userRating\" min=\"1\" max=\"5\" step=\"0.1\">\n        <br>\n        <label for=\"userReviewText\">Review: </label>\n        <textarea id=\"userReviewText\"></textarea>\n        <br>\n        <button onclick=\"submitReview()\">Submit Review</button>\n    </div>\n\n    <script>\n        let totalRating = 4.5; // Initial average rating\n        let numberOfReviews = 1; // Initial number of reviews\n\n        function submitReview() {\n            const userRating = parseFloat(document.getElementById(\"userRating\").value);\n            const userReviewText = document.getElementById(\"userReviewText\").value;\n\n            // Check if the user entered a valid rating\n            if (isNaN(userRating) || userRating < 1 || userRating > 5) {\n                alert(\"Please enter a valid rating between 1 and 5.\");\n                return;\n            }\n\n            // Update the total rating and number of reviews\n            totalRating = (totalRating * numberOfReviews + userRating) / (numberOfReviews + 1);\n            numberOfReviews++;\n\n            // Update the displayed average rating\n            document.getElementById(\"averageRating\").textContent = totalRating.toFixed(1) + \" / 5\";\n\n            // Display the user's review\n            document.getElementById(\"userReview\").textContent = `\"${userReviewText}\"`;\n\n            // Display the user's name (you can customize this part)\n            document.getElementById(\"reviewAuthor\").textContent = \"- Anonymous\";\n\n            // Clear the input fields\n            document.getElementById(\"userRating\").value = \"\";\n            document.getElementById(\"userReviewText\").value = \"\";\n        }\n    </script>\n\n</body>\n</html>\n",
+    "js": ""
+  },
+  "tags": [
+    "Display"
+  ],
+  "theme": "{{appsmith.theme}}",
+  "topRow": 14,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "",
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Review Widget with JavaScript</title>\n    <style>\n        /* Add the CSS styles for the review widget (same as before) */\n        .review-widget {\n            font-family: 'Arial', sans-serif;\n            border: 1px solid #ccc;\n            padding: 15px;\n            width: 300px;\n            text-align: center;\n            margin: 20px;\n        }\n\n        .rating {\n            color: #f39c12; /* Change the color to your preference */\n            font-size: 24px;\n            margin-bottom: 10px;\n        }\n\n        .user-review {\n            font-size: 14px;\n            margin-bottom: 10px;\n        }\n\n        .author {\n            font-style: italic;\n            color: #777;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"review-widget\" id=\"reviewWidget\">\n        <div class=\"rating\" id=\"averageRating\">4.5 / 5</div>\n        <div class=\"user-review\" id=\"userReview\">\n            \"This is a fantastic product! I'm very satisfied with my purchase.\"\n        </div>\n        <div class=\"author\" id=\"reviewAuthor\">- John Doe</div>\n\n        <hr>\n\n        <h3>Submit Your Review</h3>\n        <label for=\"userRating\">Rating: </label>\n        <input type=\"number\" id=\"userRating\" min=\"1\" max=\"5\" step=\"0.1\">\n        <br>\n        <label for=\"userReviewText\">Review: </label>\n        <textarea id=\"userReviewText\"></textarea>\n        <br>\n        <button onclick=\"submitReview()\">Submit Review</button>\n    </div>\n\n    <script>\n        let totalRating = 4.5; // Initial average rating\n        let numberOfReviews = 1; // Initial number of reviews\n\n        function submitReview() {\n            const userRating = parseFloat(document.getElementById(\"userRating\").value);\n            const userReviewText = document.getElementById(\"userReviewText\").value;\n\n            // Check if the user entered a valid rating\n            if (isNaN(userRating) || userRating < 1 || userRating > 5) {\n                alert(\"Please enter a valid rating between 1 and 5.\");\n                return;\n            }\n\n            // Update the total rating and number of reviews\n            totalRating = (totalRating * numberOfReviews + userRating) / (numberOfReviews + 1);\n            numberOfReviews++;\n\n            // Update the displayed average rating\n            document.getElementById(\"averageRating\").textContent = totalRating.toFixed(1) + \" / 5\";\n\n            // Display the user's review\n            document.getElementById(\"userReview\").textContent = `\"${userReviewText}\"`;\n\n            // Display the user's name (you can customize this part)\n            document.getElementById(\"reviewAuthor\").textContent = \"- Anonymous\";\n\n            // Clear the input fields\n            document.getElementById(\"userRating\").value = \"\";\n            document.getElementById(\"userReviewText\").value = \"\";\n        }\n    </script>\n\n</body>\n</html>\n",
+    "js": ""
+  },
+  "version": 1,
+  "widgetId": "f6jladulzi",
+  "widgetName": "Custom2"
 }
